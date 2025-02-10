@@ -5,7 +5,7 @@ jobs:
     name: Gitleaks
     runs-on: ubuntu-latest
     steps:
-      - uses: adtyarai/gitleaks-action1@v2.0.0
+      - uses: adtyarai/gitleaks-action1@v3.0.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           pull_request_number: ${{ github.event.pull_request.number }}

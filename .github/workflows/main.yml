@@ -5,9 +5,5 @@ jobs:
     name: Gitleaks
     runs-on: ubuntu-latest
     steps:
-      - uses: adtyarai/gitleaks-action1@main
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          pull_request_number: ${{ github.event.pull_request.number }}
-          github_repository: ${{ github.repository }}
-          latest_commit: ${{ github.event.after}}
+      - name: Print github event
+        run: echo '${{ toJson(github) }}'

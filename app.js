@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = 3001;
-const API_KEY = 'AIzaSyAfHNk2CTX44LJiSKEYy1jmYgSuMk8IABA';
+const PORT = 3000;
 
 app.get('/', (req, res) => {
   res.send('Default route');

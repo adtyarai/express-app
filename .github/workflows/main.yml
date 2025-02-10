@@ -3,11 +3,7 @@ on: [pull_request]
 jobs:
   gitleaks_scan:
     name: Gitleaks
-    runs-on: unbuntu-latest
+    runs-on: ubuntu-latest
     steps:
-      - uses: adtyrai/gitleaks-action1@v2.0.0
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          pull_request_number: ${{ github.event.pull_request.number }}
-          github_repository: ${{ github.repository }}
-          latest_commit: ${{ github.event.after}}
+      - name: Print github event
+        run: echo '${{ toJson(github) }}'
